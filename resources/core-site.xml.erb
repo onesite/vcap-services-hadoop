@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value><%= data_dir %></value>
+    </property>
+    <property>
+        <name>fs.checkpoint.dir</name>
+        <value><%= data_dir %>/dfs/namesecondary</value>
+    </property>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://<%= hostname %>:<%= fs_default_name_port %></value>
+    </property>
+</configuration>

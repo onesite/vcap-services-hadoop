@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>mapred.job.tracker</name>
+        <value><%= hostname %>:<%= mapred_job_tracker_port %></value>
+    </property>
+    <property>
+        <name>mapred.job.tracker.http.address</name>
+        <value>http://<%= hostname %>:<%= mapred_job_tracker_http_address_port %></value>
+    </property>
+    <property>
+        <name>mapred.task.tracker.http.address</name>
+        <value>http://<%= hostname %>:<%= mapred_task_tracker_http_address_port %></value>
+    </property>
+    <property>
+        <name>mapred.local.dir</name>
+        <value><%= data_dir %>/mapred/local</value>
+        <final>true</final>
+    </property>
+    <property>
+        <name>mapred.system.dir</name>
+        <value><%= data_dir %>/mapred/system</value>
+        <final>true</final>
+    </property>
+    <property>
+        <name>mapreduce.jobtracker.staging.root.dir</name>
+        <value><%= data_dir %>/mapred/staging</value>
+        <final>true</final>
+    </property>
+    <property>
+        <name>mapred.temp.dir</name>
+        <value><%= data_dir %>/mapred/temp</value>
+        <final>true</final>
+    </property>
+</configuration>

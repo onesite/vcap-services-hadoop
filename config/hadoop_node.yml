@@ -1,0 +1,19 @@
+---
+capacity: 5
+plan: free
+local_db: sqlite3:/var/vcap/services/hadoop/hadoop_node.db
+mbus: nats://localhost:4222/
+index: 0
+base_dir: /var/vcap/services/hadoop/instances
+logging:
+  level: debug
+pid: /var/vcap/sys/run/hadoop_node.pid
+node_id: hadoop_node_0
+op_time_limit: 30
+hostname: 10.0.1.1
+port_range:
+  first: 5000
+  last: 5200
+hadoop:
+  instance_limit: 5
+  runtime_path: /var/vcap/packages/hadoop/bin/hadoop

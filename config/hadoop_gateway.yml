@@ -1,0 +1,21 @@
+---
+# cloud_controller_uri: api.vcap.me
+service:
+  name: hadoop
+  version: "1.1.2"
+  timeout: 20
+  description: 'Hadoop datastore'
+  plans: ['free']
+  default_plan: free
+  tags: ['hadoop']
+  supported_versions: ["1.1.2"]
+  version_aliases:
+    "current": "1.1.2"
+ip_route: localhost
+index: 0
+token: "0xdeadbeef"
+logging:
+  level: debug
+mbus: nats://localhost:4222
+pid: /var/vcap/sys/run/hadoop_service.pid
+node_timeout: 20
